@@ -1,0 +1,55 @@
+/* Solution to the problem Chef and his Cake : https://www.codechef.com/problems/GIT01 */
+
+import java.util.Scanner;
+class GIT01{
+    public static void main(String args[]){
+        Scanner scan = new Scanner(System.in);
+        int testcases = scan.nextInt();
+        
+        for(int i=0;i<testcases;i++){
+            int n = scan.nextInt();
+            int m = scan.nextInt();
+            int sum1 = 0;
+            int sum2 = 0;
+            int cost = 0;
+            
+            scan.nextLine();
+            for(int j=0;j<n;j++){
+                String str = scan.nextLine();
+                for(int k=0;k<m;k++){
+                    
+                    if(j%2 == 0){
+                        if(k%2 == 0 && str.charAt(k) == 'G'){
+                            sum1 += 3;
+                        }else if(k%2 == 1 && str.charAt(k) == 'R'){
+                           sum1 += 5; 
+                        }
+                        
+                        if(k%2 == 0 && str.charAt(k) == 'R'){
+                            sum2 += 5;
+                        }else if(k%2 == 1 && str.charAt(k) == 'G'){
+                            sum2 += 3;
+                        }
+                    }else{
+                        if(k%2 == 0 && str.charAt(k) == 'R'){
+                            sum1 += 5;
+                        }else if(k%2 == 1 && str.charAt(k) == 'G'){
+                           sum1 += 3; 
+                        }
+                        
+                        if(k%2 == 0 && str.charAt(k) == 'G'){
+                            sum2 += 3;
+                        }else if(k%2 == 1 && str.charAt(k) == 'R'){
+                            sum2 += 5;
+                        }
+                    }
+                    
+                }
+            }
+            
+            cost += (sum1<=sum2)?sum1:sum2;
+            System.out.println(cost);
+        }
+    
+    }
+}
