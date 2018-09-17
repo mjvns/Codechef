@@ -1,3 +1,4 @@
+// Problem link: https://www.codechef.com/SEPT18B/problems/MAGICHF
 import java.util.Scanner;
 
 class C1{
