@@ -1,4 +1,4 @@
-// Problem Link: https://www.codechef.com/SEPT18B/problems/CHEFADV
+// Problem url: https://www.codechef.com/SEPT18B/problems/CHEFADV
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
